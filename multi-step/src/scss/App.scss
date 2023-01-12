@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+//APP
+
+//Variables
+/*Primary*/
+$marineBlue: hsl(213, 96%, 18%);
+$purplishBlue: hsl(243, 100%, 62%);
+$pastelBlue: hsl(228, 100%, 84%);
+$lightBlue: hsl(206, 94%, 87%);
+$strawberryRed: hsl(354, 84%, 57%);
+/*Neutral*/
+$coolGray: hsl(231, 11%, 63%);
+$lightGray: hsl(229, 24%, 87%);
+$magnolia: hsl(217, 100%, 97%);
+$alabaster: hsl(231, 100%, 99%);
+$white: hsl(0, 0%, 100%);
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background: $magnolia;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+#app{
+  background: $white;
+  width: calc(100vw - 40%);
+  height: max-content;
+  border-radius: .5rem;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.telaLogin{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.btn{
+  height: 2.5rem;
+  max-width: 7rem;
+  width: 100%;
+  color: $white;
+  background: $marineBlue;
+  outline: none;
+  border: none;
+  border-radius: .25rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0;
+
+  &:hover{
+    background: $purplishBlue;
+  }
+}
+
+//Article Menu
+.menu {
+  position: absolute;
+  color: $white;
+  top: 50px;
+  margin-left: 20px;
+  display: grid;
+  place-items: start;
+
+  .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+
+    .step{
+      color: $lightGray;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: .625rem;
+      margin: 0;
+    }
+
+    .step-title{
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .75rem;
+      margin: 0;
+    }
+
+    .item-number {
+      border: 1px solid $lightBlue;
+      border-radius: 100%;
+      padding: .625rem;
+      height: .625rem;
+      width: .625rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .75rem;
+    }
+  }
+}
+
+.active {
+  .item-number{
+    color: #000;
+    background: $lightBlue;
+  }
+}
+
+//Personal Info
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 30px 50px 0 0;
+}
+
+.title-section{
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  margin-top: .625rem;
+
+  .title{
+    color: $marineBlue;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .subtitle{
+    color: $coolGray;
+    margin: 0;
+    font-weight: 300;
+  }
+}
+
+.form-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  label{
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 100%;
+    color: $marineBlue;
+  }
+
+  input{
+    width: 97%;
+    border: 1px solid $coolGray;
+    height: 2.5rem;
+    border-radius: .5rem;
+    padding: 0 0 0 1rem;
+    color: $marineBlue;
+    font-weight: 700;
+
+    &:focus{
+      outline: none;
+      border-color: $marineBlue;
+    }
+  }
+}
