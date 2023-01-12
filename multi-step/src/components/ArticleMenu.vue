@@ -1,43 +1,25 @@
 <template>
   <section class="Image">
     <article class="menu">
-      <div class="item active">
-        <p class="item-number">1</p>
-        <div>
-          <p class="step">Step 1</p>
-          <p class="step-title">Your info</p>
-        </div>
-      </div>
-      <div class="item">
-        <p class="item-number">2</p>
-        <div>
-          <p class="step">Step 2</p>
-          <p class="step-title">Select plan</p>
-        </div>
-      </div>
-      <div class="item">
-        <p class="item-number">3</p>
-        <div>
-          <p class="step">Step 3</p>
-          <p class="step-title">Add-ons</p>
-        </div>
-      </div>
-      <div class="item">
-        <p class="item-number">4</p>
-        <div>
-          <p class="step">Step 4</p>
-          <p class="step-title">Summary</p>
-        </div>
-      </div>
+      <IconPage numbStep="1" step="Step 1" titleStep="Your info" :choice="active1"/>
+      <IconPage numbStep="2" step="Step 2" titleStep="Select plan" :choice="active2"/>
+      <IconPage numbStep="3" step="Step 3" titleStep="Add-ons" :choice="active3"/>
+      <IconPage numbStep="4" step="Step 4" titleStep="Summary" :choice="active4"/>     
     </article>
     <img src="../assets/bg-sidebar-desktop.svg" alt="sidebar desktop" />
   </section>
 </template>
 
-<script>
-export default {
-  name: "ArticleMenu",
-};
+<script setup>
+import IconPage from './IconPage.vue';
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  active1: String,
+  active2: String,
+  active3: String,
+  active4: String
+})
 </script>
 
 <style scoped>

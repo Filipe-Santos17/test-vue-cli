@@ -2,6 +2,9 @@
 
 //APP
 
+//- Mobile: 375px
+//- Desktop: 1440px
+
 //Variables
 /*Primary*/
 $marineBlue: hsl(213, 96%, 18%);
@@ -33,13 +36,19 @@ body{
   height: max-content;
   border-radius: .5rem;
   margin-top: 10px;
-  padding: 5px;
+  padding: .625rem;
 }
 
 .telaLogin{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 4rem;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .btn{
@@ -57,6 +66,16 @@ body{
 
   &:hover{
     background: $purplishBlue;
+  }
+
+  &.secondary{
+    background: $white;
+    color: $marineBlue;
+    border: none;
+
+    &:hover{
+      border: 1px solid $marineBlue;
+    }
   }
 }
 
@@ -171,5 +190,35 @@ body{
       outline: none;
       border-color: $marineBlue;
     }
+
+    &::placeholder {
+      color: $coolGray;
+      opacity: 1; 
+    }
   }
 }
+
+//Card
+.card{
+  box-shadow: 0 1px 2px #ccc;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  width: 6.25rem;
+  padding: 10px;
+  height: 9.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  h4{
+    color: $marineBlue;
+    margin-bottom: .5rem;
+  }
+  
+  p{
+    color: $coolGray;
+    margin: 0 0 10px 0;
+  }
+}
+
