@@ -9,5 +9,5 @@
 
 <script setup>
 import ArticleMenu from '@/components/ArticleMenu.vue';
-import PersonalInfo from '@/components/PersonalInfo.vue';
+import PersonalInfo from '@/pages/PersonalInfo.vue';
 </script>

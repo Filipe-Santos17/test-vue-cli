@@ -8,16 +8,14 @@
     </section>
   Monthly
   Yearly
-    <div class="btns">
-      <button class="btn secondary" type="button">Go Back</button>
-      <button class="btn" type="button">Next Step</button>
-    </div>
+   <Btns :next="true" :after="true" v-on:urlGo="urlGo" nextText="Next Step"/>
   </div>
 </template>
 
 <script setup>
   import TitlesSection from '@/components/TitlesSection.vue';
   import CardVue from '@/components/CardVue.vue';
+  import Btns from '@/components/Btns.vue';
 </script>
 
 <style scoped>

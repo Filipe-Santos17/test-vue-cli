@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import SelectPlan from '@/components/SelectPlan.vue';
+import SelectPlan from '@/pages/SelectPlan.vue';
 import ArticleMenu from '@/components/ArticleMenu.vue';
 </script>
 

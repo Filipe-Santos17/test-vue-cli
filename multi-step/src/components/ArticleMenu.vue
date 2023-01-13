@@ -6,7 +6,9 @@
       <IconPage numbStep="3" step="Step 3" titleStep="Add-ons" :choice="active3"/>
       <IconPage numbStep="4" step="Step 4" titleStep="Summary" :choice="active4"/>     
     </article>
-    <img src="../assets/bg-sidebar-desktop.svg" alt="sidebar desktop" />
+    <div>
+      <img src="../assets/bg-sidebar-desktop.svg" alt="sidebar desktop" />
+    </div>
   </section>
 </template>
 
@@ -25,5 +27,17 @@ const props = defineProps({
 <style scoped>
 img{
   height: 520px;
+}
+
+@media screen  and (max-width: 960px){
+  img{
+    display: none;
+  }
+
+  .Image{
+    background: url('../assets/bg-sidebar-mobile.svg') no-repeat;
+    background-size: cover;
+    height: 200px;
+  }
 }
 </style>

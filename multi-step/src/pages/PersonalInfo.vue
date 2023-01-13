@@ -21,26 +21,28 @@
         typeInput = "tel"
       />
     </section>
-    <button class="btn" type="button" @click="InpuTest">Next Step</button>
+    <Btns :next="true" :after="false" v-on:urlGo="urlGo" nextText="Next Step"/>
   </div>
 </template>
 
 <script setup>
 import {ref} from "vue"
 
-import InputComponent from './InputComponent.vue';
-import TitlesSection from './TitlesSection.vue';
+import InputComponent from '@/components/InputComponent.vue';
+import TitlesSection from '@/components/TitlesSection.vue';
+import Btns from '@/components/Btns.vue';
 
+//Variables v-model
 const testPhone = ref("")
 
-function InpuTest(){
+function urlGo(){
   console.log('test')
 }
 </script>
 
 <style scoped>
-  .btn{
-    align-self: end;
+  .btns {
     margin-top: 3rem;
+    justify-content: flex-end;
   }
 </style>
